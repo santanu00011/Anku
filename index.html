@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉  Birthday Celebration 🎂</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One:wght@400&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="background-image:url('/Pink\ Purple\ Star\ Happy\ Birthday.png') ;">
+    <!-- Animated Background Elements -->
+    <div class="background-animation">
+        <div class="floating-balloons">
+            <div class="balloon balloon-1">🎈</div>
+            <div class="balloon balloon-2">🎈</div>
+            <div class="balloon balloon-3">🎈</div>
+            <div class="balloon balloon-4">🎈</div>
+            <div class="balloon balloon-5">🎈</div>
+        </div>
+        <div class="confetti-container" id="confettiContainer"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">🎂 Birthday Bash</div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#music" class="nav-link">Music</a></li>
+                <li><a href="#game" class="nav-link">Game</a></li>
+                <li><a href="#countdown" class="nav-link">Countdown</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title animate-bounce">Happy Birthday Anku!🎉</h1>
+            <p class="hero-subtitle">Let's celebrate this special day together!</p>
+            <div class="birthday-candles">
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="wick"></div>
+                    <div class="wax"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="wick"></div>
+                    <div class="wax"></div>
+                </div>
+                <div class="candle">
+                    <div class="flame"></div>
+                    <div class="wick"></div>
+                    <div class="wax"></div>
+                </div>
+            </div>
+            <button class="cta-button" id="celebrateBtn">Start the Celebration! 🎊</button>
+        </div>
+    </section>
+    
+<!-- Birthday Wish Section -->
+<section class="birthday-wish-section">
+    <div class="container">
+        <h2 class="section-title">💖 A Special Message for You</h2>
+
+        <div class="birthday-wish">
+            <p>
+                Happy Birthday, Anku! 🎂❤️
+            </p>
+
+            <p>
+                Happy Birthday!
+Wishing you a fantastic day filled with celebration, great food, and even better company. May this next year bring you continuous happiness, new adventures, and success in everything you do. Enjoy your special day!
+            </p>
+
+            <p>
+                With lots of love ❤️
+            </p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">📸 Photo Gallery</h2>
+            <div class="gallery-controls">
+                <button class="gallery-btn" id="gridViewBtn">Grid View</button>
+                <button class="gallery-btn" id="slideshowViewBtn">Slideshow</button>
+            </div>
+            
+            <!-- Grid View -->
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-caption="Birthday Party 2026">
+                    <img src="photos/Photo1.jpg" alt="Raahon Mein Tumko Jo Dhoop Sataye">
+                    <div class="gallery-overlay">
+                        <p>Raahon Mein Tumko Jo Dhoop Sataye ❤️</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-caption="Cake Time!">
+                    <img src="photos/Photo2.png" alt="Chaaon Bicha Denge Hum">
+                    <div class="gallery-overlay">
+                        
+                        <p>Chaaon Bicha Denge Hum 🫶</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-caption="Friends Forever">
+                    <img src="photos/photo3.png" alt="Andhere Daraye To Jaa Kar Falak Pe ❤️">
+                    <div class="gallery-overlay">
+                        
+                        <p>Andhere Daraye To Jaa Kar Falak Pe ❤️</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-caption="Birthday Surprise">
+    <img src="photos/photo4.jpeg" alt="Chand Sajaa Denge Hum">
+    <div class="gallery-overlay">
+        <p>Chand Sajaa Denge Hum 🫶</p>
+    </div>
+</div>
+                <div class="gallery-item" data-caption="Party Decorations">
+                    <img src="photos/photo5.jpg" alt="Chhaye Udaasi Latife Suna Kar ❤️">
+                    <div class="gallery-overlay">
+                         <p>Chhaye Udaasi Latife Suna Kar ❤️</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-caption="Group Photo">
+                    <img src="photos/photo6.jpg" alt="Tujhko Hansa Denge Hum">
+                    <div class="gallery-overlay">
+                         <p>Tujhko Hansa Denge Hum 🫶</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slideshow View -->
+            <div class="gallery-slideshow" id="gallerySlideshow" style="display: none;">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="photos/photo10.png" alt="Birthday celebration">
+                        <div class="slide-caption">Don't think u are Alone 😒</div>
+                    </div>
+                    <div class="slide">
+                        <img src="photos/photo11.png" alt="Birthday cake">
+                        <div class="slide-caption">here is your bro always present 👋 </div>
+                    </div>
+                    <div class="slide">
+                        <img src="photos/photo12.png" alt="Friends celebrating">
+                        <div class="slide-caption">To irritate you 🥰</div>
+                    </div>
+                </div>
+                <button class="slide-btn prev" id="prevSlideBtn">❮</button>
+                <button class="slide-btn next" id="nextSlideBtn">❯</button>
+                <div class="slide-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="music-section">
+        <div class="container">
+            <h2 class="section-title">🎵 Songs Recomended By Me</h2>
+            <div class="music-player">
+                <div class="player-display">
+                    <div class="album-art">
+                        <div class="vinyl-record" id="vinylRecord">
+                            <div class="vinyl-center"></div>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <h3 id="trackTitle">Happy Birthday Song</h3>
+                        <p id="trackArtist">Birthday Collection</p>
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress" id="progress"></div>
+                            </div>
+                            <div class="time-display">
+                                <span id="currentTime">0:00</span>
+                                <span id="duration">2:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="player-controls">
+                    <button class="control-btn" id="prevTrackBtn">⏮️</button>
+                    <button class="control-btn play-pause-btn" id="playPauseBtn">▶️</button>
+                    <button class="control-btn" id="nextTrackBtn">⏭️</button>
+                </div>
+
+                <div class="volume-control">
+                    <span>🔊</span>
+                    <input type="range" id="volumeSlider" min="0" max="100" value="50">
+                </div>
+
+                <div class="playlist">
+                    <h4>🎶 Playlist</h4>
+                    <div class="playlist-item active" data-track="0">
+                        <span>1. I think they call this love ❤️</span>
+                        <span>2:30</span>
+                    </div>
+                    <div class="playlist-item" data-track="1">
+                        <span>2. I Thought i saw your face today 💕</span>
+                        <span>3:15</span>
+                    </div>
+                    <div class="playlist-item" data-track="2">
+                        <span>3. Chaar Kadam 😚</span>
+                        <span>2:45</span>
+                    </div>
+                </div>
+
+                <!-- Audio elements -->
+                <audio id="audioPlayer" preload="metadata">
+                    <source src="" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <!-- Puzzle Game Section -->
+    <section id="game" class="game-section">
+        <div class="container">
+            <h2 class="section-title">🧩 Birthday Puzzle Challenge</h2>
+            <div class="game-controls">
+                <div class="difficulty-selector">
+                    <label>Difficulty:</label>
+                    <select id="difficultySelect">
+                        <option value="easy">Easy (3x3)</option>
+                        <option value="medium">Medium (4x4)</option>
+                        <option value="hard">Hard (5x5)</option>
+                    </select>
+                </div>
+                <div class="game-stats">
+                    <div class="stat">
+                        <span>Time:</span>
+                        <span id="gameTimer">00:00</span>
+                    </div>
+                    <div class="stat">
+                        <span>Moves:</span>
+                        <span id="moveCounter">0</span>
+                    </div>
+                </div>
+                <button class="game-btn" id="newGameBtn">New Game</button>
+                <button class="game-btn" id="showSolutionBtn">Show Solution</button>
+            </div>
+
+            <div class="puzzle-container">
+                <div class="puzzle-board" id="puzzleBoard">
+                    <!-- Puzzle pieces will be generated here -->
+                </div>
+                <div class="solution-preview" id="solutionPreview">
+                    <h4>Solution Preview:</h4>
+                    <img src="" alt="Solution" id="solutionImage">
+                </div>
+            </div>
+
+            <div class="game-completion" id="gameCompletion" style="display: none;">
+                <div class="completion-message">
+                    <h3>🎉 Congratulations! 🎉</h3>
+                    <p>You solved the puzzle!</p>
+                    <p>Time: <span id="finalTime"></span></p>
+                    <p>Moves: <span id="finalMoves"></span></p>
+                    <button class="game-btn" id="playAgainBtn">Play Again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown" class="countdown-section">
+        <div class="container">
+            <h2 class="section-title">⏰ Birthday Countdown</h2>
+            <div class="countdown-container">
+                <div class="countdown-input">
+                    <label for="birthdayDate">Set Your Birthday Date:</label>
+                    <input type="datetime-local" id="birthdayDate">
+                </div>
+                
+                <div class="countdown-display" id="countdownDisplay">
+                    <div class="time-unit">
+                        <span class="time-number" id="days">00</span>
+                        <span class="time-label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="time-number" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+
+                <div class="countdown-message" id="countdownMessage">
+                    <p>Set your birthday date to start the countdown!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Anku's 2026 Birthday Celebration Website . Made with ❤️ for special moments by your half-pant engineer bro!</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#music">Music</a>
+                <a href="#game">Game</a>
+                <a href="#countdown">Countdown</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
