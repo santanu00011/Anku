@@ -1091,3 +1091,61 @@ function handleSwipe() {
         }
     }
 }
+/* ===== FULL SCREEN BIRTHDAY PAGES ===== */
+
+.hero,
+.birthday-wish-section,
+.gallery-section,
+.music-section,
+.game-section,
+.countdown-section {
+    min-height: 100vh;
+    min-height: 100svh;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ===== NEXT BUTTON ===== */
+
+.next-page-btn {
+    display: block;
+    margin: 35px auto 20px;
+    padding: 13px 32px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff6b9d, #4ecdc4);
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.next-page-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .hero,
+    .birthday-wish-section,
+    .gallery-section,
+    .music-section,
+    .game-section,
+    .countdown-section {
+        min-height: 100svh;
+        width: 100%;
+    }
+
+    .next-page-btn {
+        font-size: 16px;
+        padding: 12px 26px;
+    }
+}
