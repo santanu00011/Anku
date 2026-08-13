@@ -64,12 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Initialize event listeners
 function initializeEventListeners() {
-    // Celebrate button
-    const celebrateBtn = document.getElementById('celebrateBtn');
-    if (celebrateBtn) {
-        celebrateBtn.addEventListener('click', celebrateNow);
-    }
-    
+ 
     // Gallery controls
     const gridViewBtn = document.getElementById('gridViewBtn');
     const slideshowViewBtn = document.getElementById('slideshowViewBtn');
