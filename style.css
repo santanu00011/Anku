@@ -1241,3 +1241,17 @@ select:focus,
 
     margin-bottom: 25px;
 }
+/* FORCE BIRTHDAY WISH FONT */
+
+.birthday-wish,
+.birthday-wish p,
+.birthday-wish p * {
+    font-family: 'Fredoka One', cursive !important;
+    color: #000000 !important;
+}
+
+.birthday-wish p {
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.8 !important;
+}
