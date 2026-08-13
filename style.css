@@ -1195,3 +1195,36 @@ select:focus,
     color: #ff6b9d;
     margin-bottom: 18px;
 }
+.birthday-wish-section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 10;
+}
+
+.birthday-wish {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: calc(100% - 40px);
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    color: #333 !important;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.birthday-wish p {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #333 !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    text-align: center;
+    line-height: 1.8;
+    margin: 15px 0;
+}
