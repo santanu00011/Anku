@@ -1168,63 +1168,76 @@ select:focus,
     animation: fadeInUp 0.6s ease-out forwards;
 }
 /* Birthday Wish Section */
-.birthday-wish-section {
-    text-align: center;
-}
 
-.birthday-wish {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 30px 40px;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-}
-
-.birthday-wish p {
-    margin: 12px 0;
-}
-.birthday-wish p:first-child {
-    font-family: 'Fredoka One', cursive;
-    font-size: 1.4rem;
-    color: #ff6b9d;
-    margin-bottom: 18px;
-}
 .birthday-wish-section {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
     position: relative;
     z-index: 10;
+    text-align: center;
 }
 
 .birthday-wish {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+
     width: calc(100% - 40px);
     max-width: 850px;
+
     margin: 0 auto;
     padding: 30px 40px;
+
     box-sizing: border-box;
-    color: #333 !important;
+
+    text-align: center;
+
+    /* Same font as Happy Birthday, Anku */
+    font-family: 'Fredoka One', cursive;
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+    /* BLACK TEXT */
+    color: #000000 !important;
+
     background: rgba(255, 255, 255, 0.95);
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 .birthday-wish p {
     display: block !important;
+
     visibility: visible !important;
     opacity: 1 !important;
-    color: #333 !important;
+
+    font-family: 'Fredoka One', cursive;
+
+    color: #000000 !important;
+
+    font-size: 1.1rem;
+
     white-space: normal !important;
     overflow-wrap: break-word !important;
     word-break: normal !important;
+
     text-align: center;
+
     line-height: 1.8;
-    margin: 15px 0;
+
+    margin: 18px 0;
+}
+
+.birthday-wish p:first-child {
+    font-family: 'Fredoka One', cursive;
+
+    font-size: 1.4rem;
+
+    color: #000000 !important;
+
+    margin-bottom: 25px;
 }
