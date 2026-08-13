@@ -1149,3 +1149,16 @@ function handleSwipe() {
         padding: 12px 26px;
     }
 }
+function goToNextPage(sectionId) {
+    const nextSection = document.getElementById(sectionId);
+
+    if (!nextSection) {
+        console.error("Section not found:", sectionId);
+        return;
+    }
+
+    nextSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+}
