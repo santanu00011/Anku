@@ -16,17 +16,17 @@ const audioTracks = [
     {
         title: "I think they call this love ❤️",
         artist: "Listin when you feel happy 🙂",
-        src: "audio/22.mpeg"
+        src: "22.mpeg"
     },
     {
         title: "I Thought i saw your face today 💕",
         artist: "Listin when u feel fresh 😇",
-        src: "audio/23.mpeg"
+        src: "23.mpeg"
     },
     {
         title: "Chaar Kadam 😚",
         artist: " Listin When u thought nobody cares about u 😓",
-        src: "audio/24.mpeg"
+        src: "24.mpeg"
     }
 ];
 // Gallery images for puzzle
@@ -259,42 +259,21 @@ function createParticles() {
 }
 
 function celebrateNow() {
-
-    // Start the first song
-    if (audioPlayer) {
-        loadTrack(0);
-
-        audioPlayer.play()
-            .then(() => {
-                isPlaying = true;
-
-                if (playPauseBtn) {
-                    playPauseBtn.textContent = '⏸️';
-                }
-
-                if (vinylRecord) {
-                    vinylRecord.classList.add('playing');
-                }
-            })
-            .catch(error => {
-                console.error("Audio could not play:", error);
-            });
-    }
-
     // Celebration effect
     triggerConfettiExplosion();
 
-    // Open Special Message
-    const messageSection = document.getElementById('special-message');
+    // Scroll to Special Message section
+    const messageSection = document.querySelector('.birthday-wish-section');
 
     if (messageSection) {
-        messageSection.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+        const offsetTop = messageSection.offsetTop - 80;
+
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
         });
     }
 }
-
 function triggerConfettiExplosion() {
     const container = document.getElementById('confettiContainer');
     if (!container) return;
@@ -1090,75 +1069,4 @@ function handleSwipe() {
             }
         }
     }
-}
-/* ===== FULL SCREEN BIRTHDAY PAGES ===== */
-
-.hero,
-.birthday-wish-section,
-.gallery-section,
-.music-section,
-.game-section,
-.countdown-section {
-    min-height: 100vh;
-    min-height: 100svh;
-    width: 100%;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* ===== NEXT BUTTON ===== */
-
-.next-page-btn {
-    display: block;
-    margin: 35px auto 20px;
-    padding: 13px 32px;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(45deg, #ff6b9d, #4ecdc4);
-    color: white;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-
-.next-page-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-
-    .hero,
-    .birthday-wish-section,
-    .gallery-section,
-    .music-section,
-    .game-section,
-    .countdown-section {
-        min-height: 100svh;
-        width: 100%;
-    }
-
-    .next-page-btn {
-        font-size: 16px;
-        padding: 12px 26px;
-    }
-}
-function goToNextPage(sectionId) {
-    const nextSection = document.getElementById(sectionId);
-
-    if (!nextSection) {
-        console.error("Section not found:", sectionId);
-        return;
-    }
-
-    nextSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });
 }
