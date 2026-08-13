@@ -259,18 +259,39 @@ function createParticles() {
 }
 
 function celebrateNow() {
+
+    // Start the first song
+    if (audioPlayer) {
+        currentTrack = 0;
+        loadTrack(0);
+
+        audioPlayer.play()
+            .then(() => {
+                isPlaying = true;
+
+                if (playPauseBtn) {
+                    playPauseBtn.textContent = '⏸️';
+                }
+
+                if (vinylRecord) {
+                    vinylRecord.classList.add('playing');
+                }
+            })
+            .catch(error => {
+                console.error("Audio could not play:", error);
+            });
+    }
+
     // Celebration effect
     triggerConfettiExplosion();
 
-    // Scroll to Special Message section
-    const messageSection = document.querySelector('.birthday-wish-section');
+    // Open Special Message
+    const messageSection = document.getElementById('special-message');
 
     if (messageSection) {
-        const offsetTop = messageSection.offsetTop - 80;
-
-        window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
+        messageSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
     }
 }
