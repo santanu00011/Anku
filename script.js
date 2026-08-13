@@ -259,18 +259,14 @@ function createParticles() {
 }
 
 function celebrateNow() {
-    // Celebration effect
     triggerConfettiExplosion();
 
-    // Scroll to Special Message section
-    const messageSection = document.querySelector('.birthday-wish-section');
+    const messageSection = document.getElementById('special-message');
 
     if (messageSection) {
-        const offsetTop = messageSection.offsetTop - 80;
-
-        window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
+        messageSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
     }
 }
