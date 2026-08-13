@@ -16,17 +16,17 @@ const audioTracks = [
     {
         title: "I think they call this love ❤️",
         artist: "Listin when you feel happy 🙂",
-        src: "audio/22.mpeg"
+        src: "22.mpeg"
     },
     {
         title: "I Thought i saw your face today 💕",
         artist: "Listin when u feel fresh 😇",
-        src: "audio/23.mpeg"
+        src: "23.mpeg"
     },
     {
         title: "Chaar Kadam 😚",
         artist: " Listin When u thought nobody cares about u 😓",
-        src: "audio/24.mpeg"
+        src: "24.mpeg"
     }
 ];
 // Gallery images for puzzle
