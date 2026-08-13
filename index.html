@@ -62,7 +62,20 @@
                     <div class="wax"></div>
                 </div>
             </div>
-            <button class="cta-button" id="celebrateBtn">Start the Celebration! 🎊</button>
+           <button 
+    class="cta-button" 
+    id="celebrateBtn"
+    onclick="
+        const music = document.getElementById('audioPlayer');
+        music.src = '22.mpeg';
+        music.load();
+        music.play().catch(error => console.error('Music error:', error));
+        document.getElementById('special-message').scrollIntoView({
+            behavior: 'smooth'
+        });
+    ">
+    Start the Celebration! 🎊
+</button>
         </div>
     </section>
     
