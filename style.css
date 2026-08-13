@@ -197,10 +197,7 @@ body {
     position: relative;
     z-index: 2;
 
-    background-image: url("Pink Purple Star Happy Birthday.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #ffd6e5;
 }
 
 .hero-content {
