@@ -197,7 +197,7 @@ body {
     position: relative;
     z-index: 2;
 
-    background: #ffd6e5;
+   background: transparent;
 }
 
 .hero-content {
