@@ -258,23 +258,16 @@ function createParticles() {
     }
 }
 
-// Celebration function
 function celebrateNow() {
-    // Trigger confetti explosion
+    // Celebration effect
     triggerConfettiExplosion();
-    
-    // Play celebration sound (if available)
-    if (audioPlayer && !audioPlayer.src) {
-        // If no audio is loaded, just show visual effects
-        showCelebrationMessage();
-    } else {
-        togglePlay();
-    }
-    
-    // Scroll to gallery section
-    const gallerySection = document.getElementById('gallery');
-    if (gallerySection) {
-        const offsetTop = gallerySection.offsetTop - 80;
+
+    // Scroll to Special Message section
+    const messageSection = document.querySelector('.birthday-wish-section');
+
+    if (messageSection) {
+        const offsetTop = messageSection.offsetTop - 80;
+
         window.scrollTo({
             top: offsetTop,
             behavior: 'smooth'
