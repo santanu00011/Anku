@@ -259,8 +259,32 @@ function createParticles() {
 }
 
 function celebrateNow() {
+
+    // Start the first song
+    if (audioPlayer) {
+        loadTrack(0);
+
+        audioPlayer.play()
+            .then(() => {
+                isPlaying = true;
+
+                if (playPauseBtn) {
+                    playPauseBtn.textContent = '⏸️';
+                }
+
+                if (vinylRecord) {
+                    vinylRecord.classList.add('playing');
+                }
+            })
+            .catch(error => {
+                console.error("Audio could not play:", error);
+            });
+    }
+
+    // Celebration effect
     triggerConfettiExplosion();
 
+    // Open Special Message
     const messageSection = document.getElementById('special-message');
 
     if (messageSection) {
