@@ -1253,52 +1253,70 @@ select:focus,
     font-weight: 400 !important;
     line-height: 1.8 !important;
 }
-/* Mobile Balloon Fix */
+/* FINAL MOBILE BACKGROUND ANIMATION FIX */
 
 @media (max-width: 768px) {
 
+    /* Keep animations behind all page content */
     .background-animation {
-        display: block !important;
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
+        width: 100vw !important;
+        height: 100vh !important;
 
-        /* Behind the hero content */
-        z-index: 0 !important;
+        z-index: 1 !important;
 
         pointer-events: none !important;
     }
 
+    /* Balloons stay inside the background layer */
     .floating-balloons {
-        display: block !important;
         position: absolute !important;
-        width: 100% !important;
-        height: 100% !important;
+        inset: 0 !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
     }
 
     .balloon {
-        display: block !important;
         position: absolute !important;
-
-        /* Behind text */
-        z-index: 0 !important;
-
-        font-size: 2rem !important;
-    }
-
-    .hero {
-        position: relative !important;
-
-        /* Above balloons */
         z-index: 1 !important;
-
-        background: transparent !important;
+        pointer-events: none !important;
     }
 
-    .hero-content {
-        position: relative !important;
-        z-index: 2 !important;
+    /* Confetti stays behind content */
+    .confetti-container {
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+    }
+
+    .confetti {
+        z-index: 1 !important;
+        pointer-events: none !important;
+    }
+
+    /* Particles stay behind content */
+    .particles {
+        position: absolute !important;
+        inset: 0 !important;
+        z-index: 1 !important;
+        pointer-events: none !important;
+    }
+
+    .particle {
+        z-index: 1 !important;
+        pointer-events: none !important;
+    }
+
+    /* All actual page content stays above animations */
+    .navbar,
+    .hero,
+    .hero-content,
+    section,
+    .footer {
+        position: relative;
+        z-index: 2;
     }
 }
